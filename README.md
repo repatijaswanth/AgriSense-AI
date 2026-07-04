@@ -1,4 +1,4 @@
-# 🌾 Smart Agriculture Assistant
+# 🌾 AgriSense AI-Smart Agriculture Assistant
 
 A full-stack MERN application that helps farmers with AI-powered crop disease diagnosis, live weather forecasts and farming advisories, and an AI chat advisor — all powered by Google's Gemini API.
 
