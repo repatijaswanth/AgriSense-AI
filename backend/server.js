@@ -40,6 +40,12 @@ app.get("/api/health", (req, res) => {
   res.json({ status: "OK", message: "Smart Agriculture Assistant API is running" });
 });
 
+// ─── Serve React frontend build (single-service deployment) ─────────────────
+app.use(express.static(path.join(__dirname, "../frontend/dist")));
+app.get(/^(?!\/api|\/uploads).*/, (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/dist", "index.html"));
+});
+
 // Error handling
 app.use(notFound);
 app.use(errorHandler);
